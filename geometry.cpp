@@ -1,5 +1,5 @@
 // Autor    Alex Krieg
-// Version  01.00.00
+// Version  00.00.00
 // Datum    30.09.2018
 
 #include "geometry.h"
