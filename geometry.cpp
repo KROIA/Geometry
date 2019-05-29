@@ -1,14 +1,15 @@
 // Autor    Alex Krieg
-// Version  00.00.00
-// Datum    30.09.2018
+// Version  00.00.01
+// Datum    28.05.2019
 
 #include "geometry.h"
 
 QPoint geometry::rotate(QPoint point,QPoint rotationPoint,Angle angle)
 {
-    point.setX(cos(angle.rad())*(point.x()-rotationPoint.x())-sin(angle.rad())*(point.y()-rotationPoint.y())+rotationPoint.x());
-    point.setY(sin(angle.rad())*(point.x()-rotationPoint.x())+cos(angle.rad())*(point.y()-rotationPoint.y())+rotationPoint.y());
-    return point;
+    QPoint newPoint;
+    newPoint.setX(cos(angle.rad())*(point.x()-rotationPoint.x())-sin(angle.rad())*(point.y()-rotationPoint.y())+rotationPoint.x());
+    newPoint.setY(sin(angle.rad())*(point.x()-rotationPoint.x())+cos(angle.rad())*(point.y()-rotationPoint.y())+rotationPoint.y());
+    return newPoint;
 }
 std::vector<QPoint> geometry::rotate(std::vector<QPoint> points ,QPoint rotationPoint,Angle angle)
 {
@@ -20,9 +21,10 @@ std::vector<QPoint> geometry::rotate(std::vector<QPoint> points ,QPoint rotation
 }
 QPointF geometry::rotate(QPointF point,QPointF rotationPoint,Angle angle)
 {
-    point.setX(cos(angle.rad())*(point.x()-rotationPoint.x())-sin(angle.rad())*(point.y()-rotationPoint.y())+rotationPoint.x());
-    point.setY(sin(angle.rad())*(point.x()-rotationPoint.x())+cos(angle.rad())*(point.y()-rotationPoint.y())+rotationPoint.y());
-    return point;
+    QPointF newPoint;
+    newPoint.setX(cos(angle.rad())*(point.x()-rotationPoint.x())-sin(angle.rad())*(point.y()-rotationPoint.y())+rotationPoint.x());
+    newPoint.setY(sin(angle.rad())*(point.x()-rotationPoint.x())+cos(angle.rad())*(point.y()-rotationPoint.y())+rotationPoint.y());
+    return newPoint;
 }
 std::vector<QPointF> geometry::rotate(std::vector<QPointF> points ,QPointF rotationPoint,Angle angle)
 {
