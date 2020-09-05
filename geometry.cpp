@@ -72,6 +72,7 @@ geometry::Angle& geometry::Angle::operator=(Angle &angle)
 float geometry::Angle::operator=(float degree)
 {
     this->degree(degree);
+    return _angle;
 }
 geometry::Angle& geometry::Angle::operator+(Angle &angle)
 {
@@ -81,6 +82,7 @@ geometry::Angle& geometry::Angle::operator+(Angle &angle)
 float geometry::Angle::operator+(float degree)
 {
     this->degree(_angle + degree);
+    return _angle;
 }
 geometry::Angle& geometry::Angle::operator-(Angle &angle)
 {
@@ -90,6 +92,7 @@ geometry::Angle& geometry::Angle::operator-(Angle &angle)
 float geometry::Angle::operator-(float degree)
 {
     this->degree(_angle - degree);
+    return _angle;
 }
 float geometry::Angle::degToRad(float degree)
 {
